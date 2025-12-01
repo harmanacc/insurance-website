@@ -33,3 +33,4 @@ Before making any decisions, follow the agentic flow guidelines:
 4. do not try to run the server , i will run the server and test the changes myself.
 5. always be mindful of responsiveness , for both mobile and desktop.
 6. this is a content heavy project so make sure every best practice of a seo firendly website is followed. you may suggest improvements for seo to be added or done by me .
+7. always use shadcn components for ui elements.and lucide-react for icons. as much as you can.
