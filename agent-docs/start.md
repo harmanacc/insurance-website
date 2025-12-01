@@ -31,3 +31,5 @@ Before making any decisions, follow the agentic flow guidelines:
 2. Always utilize the project's existing utilities, functions, hooks, components, Tailwind classes, and colors.
 3. For tasks requiring creative solutions or documentation checks, create a new Markdown file in the `agent-docs/solutions` folder detailing the problem, solution, and any handled edge cases. This is initiated only when requested.
 4. do not try to run the server , i will run the server and test the changes myself.
+5. always be mindful of responsiveness , for both mobile and desktop.
+6. this is a content heavy project so make sure every best practice of a seo firendly website is followed. you may suggest improvements for seo to be added or done by me .
