@@ -2,14 +2,14 @@ import { cn } from '@/utilities/ui'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
-import type { HeroBlock as HeroBlockProps } from '@/payload-types'
+import { HeroBlock as HeroBlockProps } from '@/payload-types'
 
 export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   const { slogan, cards } = props
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center py-20">
-      <div className="container mx-auto px-4">
+    <section className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-center">
+      <div className="container mx-auto px-4 relative z-20">
         {/* Slogan */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
@@ -20,7 +20,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
         {/* 8 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {cards &&
-            cards.map((card, index) => (
+            cards.map((card, index: number) => (
               <Card
                 key={index}
                 className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
