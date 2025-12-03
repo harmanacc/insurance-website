@@ -13,21 +13,24 @@ import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { draftMode } from 'next/headers'
 
+import localFont from 'next/font/local'
+
 // @ts-expect-error - ignore for now
 import './globals.css'
 
 import { getServerSideURL } from '@/utilities/getURL'
 
+const primaryFont = localFont({
+  src: '../assets/fonts/DanaVF.woff2',
+  display: 'swap',
+  variable: '--font-primary',
+})
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
 
   return (
-    <html
-      className={cn(GeistSans.variable, GeistMono.variable)}
-      lang="en"
-      suppressHydrationWarning
-      dir="rtl"
-    >
+    <html className={`${primaryFont.variable}`} lang="fa" suppressHydrationWarning dir="rtl">
       <head>
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
