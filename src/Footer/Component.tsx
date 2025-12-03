@@ -22,7 +22,7 @@ export async function Footer() {
           <Link className="flex items-center" href="/">
             <Logo />
           </Link>
-          <p className="text-white mt-4 text-right leading-relaxed md:min-w-80 text-xs md:text-sm flex flex-col ">
+          <div className="text-white mt-4 text-right leading-relaxed md:min-w-80 text-xs md:text-sm flex flex-col ">
             <span className="font-bold ">درباره کارگزاری بیمه</span>
             <span>
               <br />
@@ -44,7 +44,7 @@ export async function Footer() {
                 <TwitterIcon />
               </div>
             </span>
-          </p>
+          </div>
           <div className="flex gap-4">
             <ThemeSelector />
           </div>
