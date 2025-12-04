@@ -124,12 +124,15 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   }
 
   return (
-    <section className="h-screen flex flex-col py-8  relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">
-      <div className="container mx-auto px-4 relative z-20 flex flex-col  h-full gap-24 pt-20">
+    <section className="h-screen flex flex-col relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">
+      <div className="container mx-auto px-4 relative z-20 flex flex-col  h-full gap-16 pt-36">
         {/* Slogan */}
         <div className="text-center">
-          <h1 className="text-4xl  font-bold text-gray-900 dark:text-white mb-4">
-            بیمه۷۶۰، مشاوره بدون دغدغه رایگان شما
+          <h1 className="text-4xl  font-bold text-white   mb-4">
+            <span className="drop-shadow-lg">
+              <span className="text-orange-800">بیمه۷۶۰</span>
+              ،مشاوره بدون دغدغه رایگان شما
+            </span>
           </h1>
         </div>
 
