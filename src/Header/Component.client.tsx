@@ -44,7 +44,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
 
   return (
     <header
-      className={`z-50 bg-white shadow-2xl rounded-2xl min-w-[900px] ${
+      className={`z-50 bg-white/80 backdrop-blur-xl shadow-2xl rounded-2xl min-w-[900px] border border-white/30 ${
         isHome ? 'fixed left-0 right-0 transition-all  duration-200' : 'sticky top-0'
       }`}
       style={
