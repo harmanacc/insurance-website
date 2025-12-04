@@ -42,7 +42,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   const renderCard = (card: { title: string; icon: string; size: string }) => (
     <Card
       className={cn(
-        'bg-white backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 w-full rounded-3xl',
+        'bg-white backdrop-blur-sm h-36 w-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300  rounded-3xl',
       )}
     >
       <CardHeader className="text-center pb-2">
@@ -55,7 +55,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   )
 
   return (
-    <section className="h-screen flex flex-col py-8  relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-center">
+    <section className="h-screen flex flex-col py-8  relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">
       <div className="container mx-auto px-4 relative z-20 flex flex-col  h-full gap-24 pt-20">
         {/* Slogan */}
         <div className="text-center">
