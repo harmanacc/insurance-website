@@ -35,7 +35,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   useEffect(() => {
     if (isHome) {
       const handleScroll = () => {
-        setIsSticky(window.scrollY > 32) // mt-8 = 2rem = 32px
+        setIsSticky(window.scrollY > 64) // mt-8 = 2rem = 32px
       }
       window.addEventListener('scroll', handleScroll)
       return () => window.removeEventListener('scroll', handleScroll)
@@ -44,17 +44,21 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
 
   return (
     <header
-      className={`z-50 bg-white shadow-header ${
-        isHome ? 'fixed left-0 right-0 transition-all duration-200' : 'sticky top-0'
+      className={`z-50 bg-white shadow-2xl rounded-2xl min-w-[900px] ${
+        isHome ? 'fixed left-0 right-0 transition-all  duration-200' : 'sticky top-0'
       }`}
-      style={isHome ? { top: isSticky ? 0 : 20 } : {}}
+      style={
+        isHome
+          ? { top: isSticky ? 0 : 20, maxWidth: isSticky ? '100%' : '70vw', margin: 'auto' }
+          : {}
+      }
       // style={{ backgroundColor: '#1A3D47' }}
       //  {...(theme ? { 'data-theme': theme } : {})} // Uncomment this line to enable dark mode
     >
       <div className="container py-4 flex justify-between">
-        <Link href="/" className="flex text-black">
-          <Logo loading="eager" priority="high" className="invert dark:invert-0" />
-          بیمه۷۶۰
+        <Link href="/" className="flex text-black justify-center items-center">
+          <Logo loading="eager" priority="high" className=" text-blue-950 font-bold text-2xl " />
+          بیمه760
         </Link>
         <HeaderNav data={data} />
       </div>

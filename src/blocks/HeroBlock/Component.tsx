@@ -130,7 +130,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
         <div className="text-center">
           <h1 className="text-4xl  font-bold text-white   mb-4">
             <span className="drop-shadow-lg">
-              <span className="text-orange-800">بیمه۷۶۰</span>
+              <span className="text-orange-800">بیمه760</span>
               ،مشاوره بدون دغدغه رایگان شما
             </span>
           </h1>
