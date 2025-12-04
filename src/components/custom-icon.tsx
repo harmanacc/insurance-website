@@ -40,7 +40,7 @@ export const CustomIcon = ({
 }: BaseIconProps) => {
   const IconComponent = iconIndex[icon]
   return (
-    <IconComponent
+    <IconComponent.ReactComponent
       className={cn(
         'cursor-pointer text-secondary',
         sizeOptions[size],

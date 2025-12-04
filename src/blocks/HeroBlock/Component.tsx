@@ -1,58 +1,127 @@
 import { cn } from '@/utilities/ui'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Heart,
+  Car,
+  Zap,
+  Map,
+  Activity,
+  TrendingUp,
+  Shield,
+  AlertTriangle,
+  Building,
+  Truck,
+} from 'lucide-react'
 
 import { HeroBlockProps } from './types'
 
 export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
-  const row1 = [
-    { title: 'بیمه عمر', description: 'تامین آینده خانواده شما', icon: '👨‍👩‍👧‍👦', size: 'double' },
-    { title: 'بیمه خودرو', description: 'پوشش کامل برای اتومبیل شما', icon: '🚗', size: 'normal' },
+  const row1: Array<{
+    title: string
+    description: string
+    icon: React.ComponentType<{ className?: string }>
+    size: string
+  }> = [
+    {
+      title: 'بیمه عمر',
+      description: 'تامین آینده خانواده شما',
+      icon: Heart,
+      size: 'double',
+    },
+    {
+      title: 'بیمه خودرو',
+      description: 'پوشش کامل برای اتومبیل شما',
+      icon: Car,
+      size: 'normal',
+    },
     {
       title: 'بیمه آتش سوزی',
       description: 'محافظت از اموال در برابر آتش سوزی',
-      icon: '🔥',
+      icon: Zap,
       size: 'normal',
     },
   ]
 
-  const row2 = [
+  const row2: Array<{
+    title: string
+    description: string
+    icon: React.ComponentType<{ className?: string }>
+    size: string
+  }> = [
     {
       title: 'بیمه مسافرتی',
       description: 'پوشش در سفرهای داخلی و خارجی',
-      icon: '✈️',
+      icon: Map,
       size: 'normal',
     },
-    { title: 'بیمه درمان', description: 'پوشش هزینه های پزشکی', icon: '🏥', size: 'normal' },
+    {
+      title: 'بیمه درمان',
+      description: 'پوشش هزینه های پزشکی',
+      icon: Activity,
+      size: 'normal',
+    },
     {
       title: 'بیمه بازنشستگی',
       description: 'پس انداز برای دوران بازنشستگی',
-      icon: '👴',
+      icon: TrendingUp,
       size: 'double',
     },
   ]
 
-  const row3 = [
-    { title: 'بیمه مسئولیت', description: 'پوشش مسئولیت مدنی', icon: '⚖️', size: 'normal' },
-    { title: 'بیمه حوادث', description: 'پوشش حوادث شخصی', icon: '🚨', size: 'normal' },
-    { title: 'بیمه مهندسی', description: 'پوشش پروژه های مهندسی', icon: '🏗️', size: 'normal' },
-    { title: 'بیمه باربری', description: 'پوشش حمل و نقل کالا', icon: '🚛', size: 'normal' },
+  const row3: Array<{
+    title: string
+    description: string
+    icon: React.ComponentType<{ className?: string }>
+    size: string
+  }> = [
+    {
+      title: 'بیمه مسئولیت',
+      description: 'پوشش مسئولیت مدنی',
+      icon: Shield,
+      size: 'normal',
+    },
+    {
+      title: 'بیمه حوادث',
+      description: 'پوشش حوادث شخصی',
+      icon: AlertTriangle,
+      size: 'normal',
+    },
+    {
+      title: 'بیمه مهندسی',
+      description: 'پوشش پروژه های مهندسی',
+      icon: Building,
+      size: 'normal',
+    },
+    {
+      title: 'بیمه باربری',
+      description: 'پوشش حمل و نقل کالا',
+      icon: Truck,
+      size: 'normal',
+    },
   ]
 
-  const renderCard = (card: { title: string; icon: string; size: string }) => (
-    <Card
-      className={cn(
-        'bg-white backdrop-blur-sm h-36 w-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300  rounded-3xl',
-      )}
-    >
-      <CardHeader className="text-center pb-2">
-        <div className="w-12 h-12  bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-          <span className="text-2xl">{card.icon}</span>
-        </div>
-        <CardTitle className="text-lg font-semibold text-white">{card.title}</CardTitle>
-      </CardHeader>
-    </Card>
-  )
+  const renderCard = (card: {
+    title: string
+    icon: React.ComponentType<{ className?: string }>
+    size: string
+  }) => {
+    const IconComponent = card.icon
+    return (
+      <Card
+        className={cn(
+          'bg-white backdrop-blur-sm h-36 w-full border-[0.5px] border-primary shadow-2xl  transition-shadow duration-300  rounded-3xl',
+        )}
+      >
+        <CardHeader className="text-center pb-2">
+          <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+            <IconComponent className="w-12 h-12 text-blue-950" />
+          </div>
+          <CardTitle className="text-lg font-medium text-black ">{card.title}</CardTitle>
+        </CardHeader>
+      </Card>
+    )
+  }
 
   return (
     <section className="h-screen flex flex-col py-8  relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">

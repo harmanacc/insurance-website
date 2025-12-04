@@ -31,13 +31,14 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
 
   return (
     <header
-      className="sticky z-20 bg-white shadow-header top-0"
+      className="sticky z-50 bg-white shadow-header top-0"
       // style={{ backgroundColor: '#1A3D47' }}
       //  {...(theme ? { 'data-theme': theme } : {})} // Uncomment this line to enable dark mode
     >
-      <div className="container py-4 flex justify-between">
-        <Link href="/">
+      <div className="container py-8 flex justify-between">
+        <Link href="/" className="flex text-black">
           <Logo loading="eager" priority="high" className="invert dark:invert-0" />
+          بیمه۷۶۰
         </Link>
         <HeaderNav data={data} />
       </div>
