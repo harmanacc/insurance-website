@@ -56,9 +56,9 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
       //  {...(theme ? { 'data-theme': theme } : {})} // Uncomment this line to enable dark mode
     >
       <div className="container py-4 flex justify-between">
-        <Link href="/" className="flex text-black justify-center items-center">
+        <Link href="/" className="flex text-black justify-center items-center text-nowrap">
           <Logo loading="eager" priority="high" className=" text-blue-950 font-bold text-2xl " />
-          بیمه760
+          بیمه کلاب 760
         </Link>
         <HeaderNav data={data} />
       </div>

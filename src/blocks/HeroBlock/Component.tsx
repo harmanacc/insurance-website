@@ -130,10 +130,13 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
         <div className="text-center">
           <h1 className="text-4xl  font-bold text-white   mb-4">
             <span className="drop-shadow-lg">
-              <span className="text-orange-800">بیمه760</span>
+              <span className="text-white">بیمه کلاب </span>
+              <span className="text-2xl text-orange-800">760</span>
               ،مشاوره بدون دغدغه رایگان شما
             </span>
           </h1>
+          <h3>با اگاهی کامل بهترین بیمه مناسب با نیازتان را دریافت کمید</h3>
+          <p>بیمه کلاب ، کارگزاری رسمی بیمه مرکزی و طرف قرار داد با کلیه شرکت های بیمه مناسب</p>
         </div>
 
         {/* Cards Layout */}
