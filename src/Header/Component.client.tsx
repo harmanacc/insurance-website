@@ -8,6 +8,7 @@ import type { Header } from '@/payload-types'
 
 import { Logo } from '@/components/Logo/Logo'
 import { HeaderNav } from './Nav'
+import { Button } from '@/components/ui/button'
 
 interface HeaderClientProps {
   data: Header
@@ -55,12 +56,13 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
       // style={{ backgroundColor: '#1A3D47' }}
       //  {...(theme ? { 'data-theme': theme } : {})} // Uncomment this line to enable dark mode
     >
-      <div className="container py-4 flex justify-between">
+      <div className="container py-4 flex justify-between text-blue-950 px-6">
         <Link href="/" className="flex text-black justify-center items-center text-nowrap">
           <Logo loading="eager" priority="high" className=" text-blue-950 font-bold text-2xl " />
           بیمه کلاب 760
         </Link>
         <HeaderNav data={data} />
+        <Button className="bg-orange-500 rounded-2xl p-6">مشاوره رایگان</Button>
       </div>
     </header>
   )
