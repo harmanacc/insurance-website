@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 
 import { HeroBlockProps } from './types'
+import { Logo } from '@/components/Logo/Logo'
 
 export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   const row1: Array<{
@@ -127,7 +128,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
     <section className="h-screen flex flex-col relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">
       <div className="container mx-auto px-4 relative z-20 flex flex-col  h-full gap-16 pt-36">
         {/* Slogan */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <h1 className="text-4xl  font-bold text-white   mb-4">
             <span className="drop-shadow-lg">
               <span className="text-white">بیمه کلاب </span>
@@ -137,6 +138,24 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
           </h1>
           <h3>با اگاهی کامل بهترین بیمه مناسب با نیازتان را دریافت کمید</h3>
           <p>بیمه کلاب ، کارگزاری رسمی بیمه مرکزی و طرف قرار داد با کلیه شرکت های بیمه مناسب</p>
+          </div> */}
+
+        <div className="flex w-full min-h-10 md:min-h-48 gap-4 items-center font-black">
+          {/* LEFT HALF – بیمه کلاب + همین الان خودتو */}
+          <div className="flex-1 flex justify-end pr-8">
+            <div className="text-right space-y-1 md:space-y-6">
+              <h1 className="text-4xl  text-white leading-none place-self-end">بیمه کلاب</h1>
+              <p className="text-4xl  text-white/90 leading-tight">همین الان خودتو</p>
+            </div>
+          </div>
+
+          {/* RIGHT HALF – 760 + بیمه کن ! */}
+          <div className="flex-1 flex justify-start pl-8">
+            <div className="text-left space-y-1 md:space-y-6">
+              <h1 className="text-4xl  text-orange-500 leading-none place-self-start">760</h1>
+              <p className="text-4xl  text-orange-500 leading-tight">بیمه کن !</p>
+            </div>
+          </div>
         </div>
 
         {/* Cards Layout */}
