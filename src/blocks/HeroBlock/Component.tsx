@@ -144,16 +144,20 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
           {/* LEFT HALF – بیمه کلاب + همین الان خودتو */}
           <div className="flex-1 flex justify-end pr-8">
             <div className="text-right space-y-1 md:space-y-6">
-              <h1 className="text-4xl  text-white leading-none place-self-end">بیمه کلاب</h1>
-              <p className="text-4xl  text-white/90 leading-tight">همین الان خودتو</p>
+              <h1 className="text-4xl font-semibold text-white leading-none place-self-end">
+                بیمه کلاب
+              </h1>
+              <h3 className="text-6xl  text-white/90 leading-tight">همین الان خودتو</h3>
             </div>
           </div>
 
           {/* RIGHT HALF – 760 + بیمه کن ! */}
           <div className="flex-1 flex justify-start pl-8">
             <div className="text-left space-y-1 md:space-y-6">
-              <h1 className="text-4xl  text-orange-500 leading-none place-self-start">760</h1>
-              <p className="text-4xl  text-orange-500 leading-tight">بیمه کن !</p>
+              <h1 className="text-4xl  text-orange-500 font-semibold leading-none place-self-start">
+                760
+              </h1>
+              <h3 className="text-6xl  text-orange-500 leading-tight">بیمه کن !</h3>
             </div>
           </div>
         </div>
