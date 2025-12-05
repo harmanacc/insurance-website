@@ -60,4 +60,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@payloadcms',
   },
+  robots:
+    process.env.ALLOW_INDEXING === 'true'
+      ? {}
+      : {
+          index: false,
+          follow: false,
+        },
 }
