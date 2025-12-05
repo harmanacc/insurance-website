@@ -5,7 +5,6 @@ import '@payloadcms/next/css'
 import type { ServerFunctionClient } from 'payload'
 import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts'
 import React from 'react'
-import localFont from 'next/font/local'
 
 import { importMap } from './admin/importMap.js'
 import './custom.scss'
@@ -13,12 +12,6 @@ import './custom.scss'
 type Args = {
   children: React.ReactNode
 }
-
-const primaryFont = localFont({
-  src: './assets/fonts/DanaVF.woff2',
-  display: 'swap',
-  variable: '--font-primary',
-})
 
 const serverFunction: ServerFunctionClient = async function (args) {
   'use server'

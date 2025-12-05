@@ -35,7 +35,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   useEffect(() => {
     if (isHome) {
       const handleScroll = () => {
-        setIsSticky(window.scrollY > 64) // mt-8 = 2rem = 32px
+        setIsSticky(window.scrollY > 128) // mt-8 = 2rem = 32px
       }
       window.addEventListener('scroll', handleScroll)
       return () => window.removeEventListener('scroll', handleScroll)
@@ -46,10 +46,10 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     <header
       className={`z-50 bg-white/80 backdrop-blur-xl shadow-2xl rounded-2xl min-w-[900px] border border-white/30 ${
         isHome ? 'fixed left-0 right-0 transition-all  duration-200' : 'sticky top-0'
-      }`}
+      } ${isSticky ? ' rounded-none' : ''}`}
       style={
         isHome
-          ? { top: isSticky ? 0 : 20, maxWidth: isSticky ? '100%' : '70vw', margin: 'auto' }
+          ? { top: isSticky ? 0 : 20, maxWidth: isSticky ? '100%' : '1000px', margin: 'auto' }
           : {}
       }
       // style={{ backgroundColor: '#1A3D47' }}
