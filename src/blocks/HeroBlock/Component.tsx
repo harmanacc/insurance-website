@@ -16,6 +16,7 @@ import {
 
 import { HeroBlockProps } from './types'
 import { Logo } from '@/components/Logo/Logo'
+import { Typewriter } from '@/components/ui/typewriter'
 
 export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   const row1: Array<{
@@ -127,24 +128,11 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
   return (
     <section className="h-screen flex flex-col relative overflow-hidden bg-[url('/hero-bg.svg')] bg-cover bg-bottom">
       <div className="container mx-auto px-4 relative z-20 flex flex-col  h-full gap-16 pt-36">
-        {/* Slogan */}
-        {/* <div className="text-center">
-          <h1 className="text-4xl  font-bold text-white   mb-4">
-            <span className="drop-shadow-lg">
-              <span className="text-white">بیمه کلاب </span>
-              <span className="text-2xl text-orange-800">760</span>
-              ،مشاوره بدون دغدغه رایگان شما
-            </span>
-          </h1>
-          <h3>با اگاهی کامل بهترین بیمه مناسب با نیازتان را دریافت کمید</h3>
-          <p>بیمه کلاب ، کارگزاری رسمی بیمه مرکزی و طرف قرار داد با کلیه شرکت های بیمه مناسب</p>
-          </div> */}
-
         <div className="flex w-full min-h-10 md:min-h-48 gap-4 items-center font-black">
           {/* LEFT HALF – بیمه کلاب + همین الان خودتو */}
           <div className="flex-1 flex justify-end pr-8">
-            <div className="text-right space-y-1 md:space-y-6">
-              <h1 className="text-4xl font-semibold text-white leading-none place-self-end">
+            <div className="text-right space-y-1 md:space-y-8">
+              <h1 className="text-4xl font-semibold text-white leading-none place-self-end drop-shadow-xl">
                 بیمه کلاب 760
               </h1>
               <h3 className="text-6xl  text-white/90 leading-tight">تا دیر نشده</h3>
@@ -153,13 +141,21 @@ export const HeroBlock: React.FC<HeroBlockProps> = (props) => {
 
           {/* RIGHT HALF – 760 + بیمه کن ! */}
           <div className="flex-1 flex justify-start pl-8">
-            <div className="text-left space-y-1 md:space-y-6">
-              <h1 className="text-4xl   font-semibold leading-none place-self-start">
+            <div className="text-left space-y-1 md:space-y-8">
+              <h1 className="text-4xl   font-semibold leading-none place-self-start drop-shadow-xl ">
                 {/* 760 */}
                 مشاوره و خرید بیمه
               </h1>
               <h3 className="text-6xl  text-orange-500 leading-tight place-self-start">
-                خودتو بیمه کن !
+                <div className="text-4xl md:text-6xl lg:text-7xl text-orange-500">
+                  <Typewriter
+                    texts={['مشاوره بگیر !', 'انتخاب کن !', 'بیمه بگیر !', 'آسوده باش !']}
+                    typeSpeed={50}
+                    deleteSpeed={50}
+                    pauseTime={7000}
+                    cursorClassName="bg-white"
+                  />
+                </div>
               </h3>
             </div>
           </div>
